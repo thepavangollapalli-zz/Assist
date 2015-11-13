@@ -1,0 +1,57 @@
+<html>
+    {% load staticfiles %}
+    <head>
+        <link href="{% static 'homepage.css' %}" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="header">
+            <!-- <h2 id="top-title">Assist</h2> -->
+            <img src="../static/logo.png"/>
+        </div>
+        
+        <div class="container">
+            <a href="/update" id="add" class="button">Update information</a>
+            <a href="/gen" id="csv" class="button">Generate Appointments</a>
+        </div>
+        <div class="veteran-info">
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Birthday</th>
+                    <!-- <th>Social Security</th> -->
+                    <th>Problem</th>
+                    <th>Time</th>
+                </tr>
+                {% for v in vet_data %}
+                    <tr id="entry-name">
+                        <td>{{ v.name }}</td>
+                        <td>{{ v.gender }}</td>
+                        <td>{{ v.age }}</td>
+                        <td>{{ v.bday }}</td>
+                        <!-- <td>{{ v.ssn }}</td> -->
+                        <td>{{ v.problem }}</td>
+                        <td>{{ v.time }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <p>Go to the <a href="/va">/va</a> endpoint for a JSON representation of the database</p>
+<!--         <div class="veteran-form">
+            <form method="POST" action="/">
+                {% csrf_token %}
+                <p>Enter your name: <input name="name"/></p>
+                <p>Enter your gender: <select name="gender">
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    </select>
+                </p>
+                <p>Age: <input type="number" name="age"/></p>
+                <p>Birthday: <input type="date" name="bday"/></p>
+                <p>SSN: <input type="text" name="ssn" pattern="[0-9]{3}-{1}[0-9]{2}-{1}[0-9]{4}"/></p>
+                <button type="submit">Submit Your Information!</button>
+            </form>
+        </div> -->
+    </body>
+</html>

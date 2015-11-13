@@ -1,0 +1,29 @@
+<html>
+    {% load staticfiles %}
+    <head>
+        <link href="{% static 'homepage.css' %}" rel="stylesheet" type="text/css">
+    </head>
+     <body>
+     <div class="header">
+            <!-- <h2 id="top-title">Assist</h2> -->
+            <img src="../static/logo.png"/>
+        </div>
+    <div class="veteran-form">
+        <form method="POST" action="/check/">
+            <!-- {% csrf_token %} -->
+            <!-- {{ csrf_token }} -->
+            <p>Enter your name: <input name="name"/></p>
+            <p>Enter your gender: <select name="gender">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                </select>
+            </p>
+            <p>Age: <input type="number" name="age"/></p>
+            <p>Birthday: <input type="date" name="bday"/></p>
+            <!-- <p>SSN: <input type="text" name="ssn" pattern="[0-9]{3}-{1}[0-9]{2}-{1}[0-9]{4}"/></p> -->
+            <p>Problem: <input type="text" name="problem"/></p>
+            <button class="button" type="submit">Submit Your Information!</button>
+        </form>
+    </div>
+    </body>
+</html>

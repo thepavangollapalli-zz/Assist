@@ -1,0 +1,111 @@
+html{
+    font-family:Avenir;
+}
+.header{
+    background-color:#205493;/*#0071bc;*/
+    /*box-shadow:0px 1px 10px;*/
+    width:102%;
+    height:125px;
+    position:relative;
+    margin-top:-10px;
+    margin-bottom:20px;
+    margin-left:-10px;
+    /*margin-right:-10;*/
+}
+img{
+    margin: 0;
+    /*background: yellow;*/
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    width:175px;height:auto;
+    transform: translate(-50%, -50%)
+    
+}   
+}
+#add{
+    position:relative;
+    margin-left:250px;
+    left:300px;
+    /*top:300px;*/
+    /*float:left;*/
+    /*clear:both;*/
+}
+#csv{
+    position:absolute;
+    right:300px;
+    /*float:right;*/
+    clear:both;
+}
+.veteran-info{
+    clear:both;
+    font-size:30px;
+}
+.container{
+    /*border:2px solid red;*/
+    padding-top:20px;
+    margin-left:310px;
+    height:80px;
+    position:relative;
+}
+table{
+    border:1px solid #ccc;
+}
+tr:nth-child(odd){
+    background-color:#fff;
+}
+tr:nth-child(even){
+    background-color:#f2f2f2;
+}
+td{
+    text-align: center;
+}
+.veteran-form{
+    /*border:2px solid black;*/
+    font-size:15px;
+    /*display:block;*/
+    width:50%;
+    /*padding:20px;*/
+    /*margin-top:20px;*/
+    padding-top:20px;
+    margin:0 auto;
+/*    margin-left:auto;
+    margin-right:auto;*/
+
+}
+form{
+    padding-top:30px;
+    font-size:20px;
+    width:50%;
+    margin:0 auto;
+    text-align:center;
+}
+.button{
+    width:250px;
+    text-align: center;
+    border:1px solid gray;
+    background-color:white;
+    padding:20px;
+    display:inline-block;
+    text-decoration: none;
+    border-radius:5px;
+    color:black;
+    transition:.25s ease-in-out;
+    font-size:20px;
+}
+
+form.button{
+    width:50%;
+}
+
+.button:hover{
+    border:1px solid #0071bc;
+    background-color:#0071bc;
+    color:white;
+    transition:.25s ease-in-out;
+}
+.button:clicked{
+    text-decoration: none;
+    color:white;
+}
